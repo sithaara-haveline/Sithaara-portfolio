@@ -70,7 +70,15 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 #about{padding-top:6rem;padding-bottom:6rem}
 .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
 .about-sidebar{position:sticky;top:8rem}
-.about-photo-box{width:100%;aspect-ratio:3/4;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--ink3);font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;margin-bottom:1.5rem;background:rgba(200,169,110,0.02)}
+.about-img-wrap{position:relative;aspect-ratio:4/5;background:var(--bg2);overflow:hidden;border:1px solid var(--border2)}
+.about-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(20%);
+  transition:transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.about-img-wrap:hover img{transform:scale(1.05)}
 .photo-icon-ring{width:48px;height:48px;border-radius:50%;border:1px dashed var(--ink3);display:flex;align-items:center;justify-content:center}
 .sidebar-facts{display:flex;flex-direction:column;gap:0}
 .fact-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.63rem;padding:.55rem 0;border-bottom:1px solid var(--border);color:var(--ink3)}
@@ -242,11 +250,11 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
   <div class="s-num">001 — About</div>
   <div class="about-grid">
     <div class="about-sidebar">
-      <div class="about-photo-box">
-        <div class="photo-icon-ring">
+      <div class="photo-icon-ring">
+        <div class="about-img-wrap img">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <span><img src="https://github.com/sithaara-haveline/Sithaara-portfolio/blob/main/Untitled%20design%20(5).png" alt="Sithaara Jubab"></span>
         </div>
-        <span><img src="https://github.com/sithaara-haveline/Sithaara-portfolio/blob/main/Untitled%20design%20(5).png"></span>
       </div>
       <div class="sidebar-facts">
         <div class="fact-row"><span>Degree</span><span class="fact-val">B.Tech (Hons.)</span></div>
