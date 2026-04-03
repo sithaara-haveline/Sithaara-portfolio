@@ -8,11 +8,12 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#3e3a3a;
-  --bg2:#6d6b6b;
+  --bg:#0a0a0a;
+  --bg2:#111;
   --ink:#f0ede6;
-  --ink2:#a09a8e;
-  --ink3:#5a5450;
+  /* UPDATED: Lightened this color for better readability */
+  --ink2:#d1cec7; 
+  --ink3:#7a7470;
   --gold:#c8a96e;
   --gold2:#e8c98e;
   --border:rgba(240,237,230,0.08);
@@ -23,6 +24,8 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden;cursor:none}
+p { font-size: 1.1rem; }
+.exp-desc, .about-p { font-size: 1.15rem; color: var(--ink2); }
 #cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .2s;mix-blend-mode:difference}
 #cursor.big{width:48px;height:48px;background:rgba(200,169,110,0.1);border:1px solid var(--gold)}
 
@@ -243,7 +246,7 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
         <div class="photo-icon-ring">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         </div>
-        <span><img>https://github.com/sithaara-haveline/Sithaara-portfolio/blob/main/Untitled%20design%20(5).png</img></span>
+        <span><img src="https://github.com/sithaara-haveline/Sithaara-portfolio/blob/main/Untitled%20design%20(5).png"></span>
       </div>
       <div class="sidebar-facts">
         <div class="fact-row"><span>Degree</span><span class="fact-val">B.Tech (Hons.)</span></div>
