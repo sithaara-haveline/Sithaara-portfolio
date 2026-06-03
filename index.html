@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sithaara Jubab Roshan</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.favicon.cc/logo3d/928080.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -27,7 +31,6 @@ p { font-size: 1.1rem; }
 .exp-desc, .about-p { font-size: 1.15rem; color: var(--ink2); }
 #cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .2s;mix-blend-mode:difference}
 #cursor.big{width:48px;height:48px;background:rgba(200,169,110,0.1);border:1px solid var(--gold)}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem}
 .nav-logo{font-family:var(--mono);font-size:.75rem;color:var(--ink2);letter-spacing:.12em;text-decoration:none;transition:color .3s}
 .nav-logo:hover{color:var(--gold)}
@@ -38,13 +41,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 /* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:3rem;position:relative;overflow:hidden}
 .hero-photo{position:absolute;right:8%;bottom:10%;height:75%;width:auto;max-width:45%;object-fit:contain;object-position:bottom center;z-index:2;border-radius:50%;box-shadow:0 20px 40px rgba(0,0,0,0.1)}
-
 .hero-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:clamp(8rem,20vw,22rem);font-style:italic;color:transparent;-webkit-text-stroke:1px rgba(200,169,110,0.08);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.03em;line-height:1}
-
 .hero-corner{position:absolute;top:3rem;right:3rem;text-align:right}
 .hero-corner-line{font-family:var(--mono);font-size:.65rem;color:var(--ink3);letter-spacing:.1em;line-height:2.4}
 .hero-corner-line span{color:var(--gold)}
-
 .hero-bottom{max-width:900px;position:relative;z-index:2}
 .hero-eyebrow{font-family:var(--mono);font-size:.68rem;color:var(--ink3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
 .hero-eyebrow::before{content:'';width:36px;height:1px;background:var(--ink3);display:block}
@@ -69,7 +69,26 @@ section{padding:8rem 3rem;max-width:1400px;margin:0 auto}
 .s-title strong{font-style:normal;font-family:var(--sans);font-weight:700}
 hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 
+/* ABOUT */
+#about{padding-top:6rem;padding-bottom:6rem}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.about-sidebar{position:sticky;top:8rem}
+.about-photo-box{width:100%;aspect-ratio:3/4;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--ink3);font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;margin-bottom:1.5rem;background:rgba(200,169,110,0.02)}
+.photo-icon-ring{width:48px;height:48px;border-radius:50%;border:1px dashed var(--ink3);display:flex;align-items:center;justify-content:center}
+.sidebar-facts{display:flex;flex-direction:column;gap:0}
+.fact-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.63rem;padding:.55rem 0;border-bottom:1px solid var(--border);color:var(--ink3)}
+.fact-val{color:var(--ink2);text-align:right}
+.about-big{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:400;line-height:1.55;color:var(--ink);margin-bottom:2.5rem}
+.about-big em{font-style:italic;color:var(--gold)}
+.about-body{font-size:.92rem;color:var(--ink2);line-height:1.9;margin-bottom:1.1rem}
+.about-body b{color:var(--ink);font-weight:500}
+.about-interests{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.ipill{border:1px solid var(--border2);border-radius:100px;padding:.3rem 1rem;font-family:var(--mono);font-size:.62rem;color:var(--ink2);letter-spacing:.06em;transition:all .2s}
+.ipill:hover{border-color:var(--gold);color:var(--gold)}
+
 /* PROJECTS */
+.projects-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:5rem;align-items:end}
+.projects-note{font-family:var(--mono);font-size:.7rem;color:var(--ink3);line-height:2;border-left:1px solid var(--border);padding-left:1.5rem}
 .project-row{display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:start;padding:2.5rem 0;border-top:1px solid var(--border);transition:padding .3s;position:relative;cursor:default}
 .project-row:last-of-type{border-bottom:1px solid var(--border)}
 .project-row:hover{padding-left:1.5rem}
@@ -90,30 +109,16 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .research-link .research-block{transition:all 0.35s ease;cursor:pointer}
 .research-link:hover .research-block{transform:translateX(12px);background:rgba(200,169,110,0.06);border-color:var(--gold)}
 
-/* Rest of your existing styles (About, Achievements, etc.) remain the same */
-.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
-.about-sidebar{position:sticky;top:8rem}
-.about-photo-box{width:100%;aspect-ratio:3/4;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--ink3);font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;margin-bottom:1.5rem;background:rgba(200,169,110,0.02)}
-.photo-icon-ring{width:48px;height:48px;border-radius:50%;border:1px dashed var(--ink3);display:flex;align-items:center;justify-content:center}
-.sidebar-facts{display:flex;flex-direction:column;gap:0}
-.fact-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.63rem;padding:.55rem 0;border-bottom:1px solid var(--border);color:var(--ink3)}
-.fact-val{color:var(--ink2);text-align:right}
-.about-big{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:400;line-height:1.55;color:var(--ink);margin-bottom:2.5rem}
-.about-big em{font-style:italic;color:var(--gold)}
-.about-body{font-size:.92rem;color:var(--ink2);line-height:1.9;margin-bottom:1.1rem}
-.about-body b{color:var(--ink);font-weight:500}
-.about-interests{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem}
-.ipill{border:1px solid var(--border2);border-radius:100px;padding:.3rem 1rem;font-family:var(--mono);font-size:.62rem;color:var(--ink2);letter-spacing:.06em;transition:all .2s}
-.ipill:hover{border-color:var(--gold);color:var(--gold)}
-
+/* Rest of original styles */
 .research-block{border:1px solid var(--border);border-radius:4px;padding:3rem;position:relative;overflow:hidden;margin-top:3rem;background:rgba(200,169,110,.02)}
 .research-block::before{content:'PUBLISHED';position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--gold);border:1px solid rgba(200,169,110,.4);padding:.2rem .6rem;border-radius:2px}
 .research-title{font-family:var(--serif);font-size:1.75rem;font-style:italic;color:var(--ink);line-height:1.3;margin-bottom:.6rem;max-width:560px}
 .research-meta{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spacing:.08em;margin-bottom:.9rem}
 .research-desc{font-size:.85rem;color:var(--ink3);line-height:1.85;max-width:600px}
 
-/* Keep other sections as they were (achievements, skills, etc.) */
+/* ACHIEVEMENTS */
 #achievements{background:var(--bg2);max-width:100%;padding:8rem 3rem}
+.ach-inner{max-width:1400px;margin:0 auto}
 .ach-ghost{font-family:var(--serif);font-size:clamp(5rem,14vw,14rem);font-weight:400;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--border2);line-height:1;margin-bottom:-2rem;user-select:none}
 .ach-list{display:flex;flex-direction:column}
 .ach-item{display:grid;grid-template-columns:3fr 1fr;align-items:center;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:padding .2s}
@@ -126,6 +131,18 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .ach-prize{font-family:var(--sans);font-size:1.5rem;font-weight:800;color:var(--gold);line-height:1}
 .ach-prize-lbl{font-family:var(--mono);font-size:.58rem;color:var(--ink3);letter-spacing:.1em;margin-top:.25rem}
 
+/* EXPERIENCE */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--border);border-top:1px solid var(--border)}
+.exp-item{padding:2rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .2s;position:relative;overflow:hidden}
+.exp-item::before{content:'';position:absolute;inset:0;background:rgba(200,169,110,.03);opacity:0;transition:opacity .3s}
+.exp-item:hover::before{opacity:1}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.65rem}
+.exp-org{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.exp-year{font-family:var(--mono);font-size:.6rem;color:var(--ink3);letter-spacing:.06em}
+.exp-role{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ink);margin-bottom:.4rem}
+.exp-desc{font-size:.9rem;color:var(--ink3);line-height:1.7}
+
+/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 .skill-cell{background:var(--bg);padding:1.5rem;transition:background .2s}
 .skill-cell:hover{background:var(--bg2)}
@@ -139,6 +156,7 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .cert-issuer{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
 .cert-name{font-size:.8rem;color:var(--ink2)}
 
+/* CONTACT */
 #contact{min-height:65vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem;max-width:1400px;margin:0 auto}
 .contact-big{font-family:var(--serif);font-size:clamp(3rem,8vw,8rem);font-weight:400;font-style:italic;line-height:.95;color:var(--ink);margin-bottom:4rem}
 .contact-big span{color:var(--gold)}
@@ -147,7 +165,6 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .cbtn:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
 .cbtn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .cbtn.primary:hover{background:var(--gold);border-color:var(--gold)}
-
 footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto}
 footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spacing:.06em}
 
@@ -172,7 +189,6 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
 </head>
 <body>
 <div id="cursor"></div>
-
 <nav>
   <a href="#" class="nav-logo">SJR — 2026</a>
   <div class="nav-r">
@@ -187,17 +203,13 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg-text" aria-hidden="true">Sithaara</div>
-  
-  <!-- Your Photo -->
   <img class="hero-photo" src="https://media.licdn.com/dms/image/v2/D4D03AQF6BYPxv4Pkcw/profile-displayphoto-scale_400_400/B4DZqhwA6xJ4Ag-/0/1763650311198?e=1782345600&v=beta&t=V2o0ee4OyRk6D71tE1WNqUkPJPpHsdZTJ51kzoq1acU" alt="Sithaara Jubab Roshan">
-
   <div class="hero-corner">
     <div class="hero-corner-line">B.Tech AI &amp; Data Science (Hons.)</div>
     <div class="hero-corner-line">Minor in Biotechnology</div>
     <div class="hero-corner-line">RSET Kakkanad · CGPA <span>9.83</span></div>
     <div class="hero-corner-line">Kochi, Kerala, India</div>
   </div>
-
   <div class="hero-bottom">
     <div class="hero-eyebrow">AI engineer &amp; researcher</div>
     <h1 class="hero-name">Sithaara<br><em>Jubab</em><br>Roshan</h1>
@@ -206,7 +218,6 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
   </div>
 </section>
 
-<!-- TICKER + ABOUT + PROJECTS + etc. (keeping the rest same as before) -->
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
@@ -220,15 +231,54 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
     <span class="ticker-item">Honours Programme<span class="ticker-sep">✦</span></span>
     <span class="ticker-item">Deep Learning Intern<span class="ticker-sep">✦</span></span>
     <span class="ticker-item">6 Languages Spoken<span class="ticker-sep">✦</span></span>
-    <!-- duplicated for smooth loop -->
     <span class="ticker-item">Published Researcher<span class="ticker-sep">✦</span></span>
     <span class="ticker-item">₹25,000 Hackathon Winner<span class="ticker-sep">✦</span></span>
     <span class="ticker-item">CGPA 9.83<span class="ticker-sep">✦</span></span>
     <span class="ticker-item">Articon Secretary<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Top 10 — YuviPep Nationally<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Karate Brown Belt<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Minor in Biotechnology<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Honours Programme<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Deep Learning Intern<span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">6 Languages Spoken<span class="ticker-sep">✦</span></span>
   </div>
 </div>
 
-<!-- PROJECTS SECTION -->
+<!-- ABOUT -->
+<hr class="divider">
+<section id="about">
+  <div class="s-num">001 — About</div>
+  <div class="about-grid">
+    <div class="about-sidebar">
+      <div class="sidebar-facts">
+        <div class="fact-row"><span>Degree</span><span class="fact-val">B.Tech (Hons.)</span></div>
+        <div class="fact-row"><span>Field</span><span class="fact-val">AI &amp; Data Science</span></div>
+        <div class="fact-row"><span>Minor</span><span class="fact-val">Biotechnology</span></div>
+        <div class="fact-row"><span>CGPA</span><span class="fact-val">9.83 / 10</span></div>
+        <div class="fact-row"><span>Year</span><span class="fact-val">S4 · 2024–28</span></div>
+        <div class="fact-row"><span>Location</span><span class="fact-val">Kochi, Kerala</span></div>
+        <div class="fact-row"><span>Languages</span><span class="fact-val">EN HI ML TM FR AR</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="about-big">I believe the most interesting AI<br><em>isn't built from data.</em><br>It's built from curiosity.</p>
+      <p class="about-body">I'm a second-year student at RSET pursuing B.Tech in AI &amp; Data Science with Honours, alongside a minor in Biomedical Engineering, because I think the future of intelligence lives at that border.</p>
+      <p class="about-body">My published research asked: <b>what if AI learned the way infant brains do?</b> Curious, exploratory, not dependent on massive static datasets. That question led to a paper in Conexus, 2025, and it still drives every project I build.</p>
+      <p class="about-body">Beyond research, I lead, write, and speak. I'm Secretary of Articon, the departmental AI-DS club. I organise events, coordinate national-level symposiums, and occasionally break boards: 1st Kyu Brown Belt in Karate. Staying in many lanes, on purpose.</p>
+      <div class="about-interests">
+        <span class="ipill">Bio-Inspired AI</span>
+        <span class="ipill">Generative Systems</span>
+        <span class="ipill">Sustainable Tech</span>
+        <span class="ipill">Interdisciplinary Research</span>
+        <span class="ipill">Creative Coding</span>
+        <span class="ipill">Technical Writing</span>
+        <span class="ipill">Event Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
 <hr class="divider">
 <section id="projects">
   <div class="s-num">002 — Work</div>
@@ -242,8 +292,10 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
     <div>
       <div class="proj-status">Ideation + Demo · Browser Extension</div>
       <div class="proj-title">SwapZero</div>
-      <div class="proj-desc">Does nothing — until you're about to buy something. Then it suggests the most sustainable and cheapest alternatives, awards SwapScore points, and lets you choose your values. Uses vision-like AI to navigate any e-commerce site.</div>
-      <div class="proj-tags"><span class="proj-tag">Vision AI</span><span class="proj-tag">Browser Extension</span><span class="proj-tag">Sustainability</span><span class="proj-tag">E-commerce</span></div>
+      <div class="proj-desc">Does nothing — until you're about to buy something. Then it suggests the most sustainable and cheapest alternatives, awards SwapScore points, and lets you choose your values. Uses vision-like AI to navigate any e-commerce site regardless of how often they update their code.</div>
+      <div class="proj-tags">
+        <span class="proj-tag">Vision AI</span><span class="proj-tag">Browser Extension</span><span class="proj-tag">Sustainability</span><span class="proj-tag">E-commerce</span>
+      </div>
     </div>
     <a href="https://sithaara-haveline.github.io/Swap-Zero/swap_index.html" class="proj-arrow" target="_blank" rel="noopener">↗</a>
   </div>
@@ -253,8 +305,10 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
     <div>
       <div class="proj-status">Work in Progress · AI Agent</div>
       <div class="proj-title">Auron</div>
-      <div class="proj-desc">A placement agent that doesn't give you a to-do list. It understands whether you want a job or a masters, builds a semester-wise roadmap, shows your skill gaps against real hiring data from dream companies.</div>
-      <div class="proj-tags"><span class="proj-tag">AI Agent</span><span class="proj-tag">NLP</span><span class="proj-tag">Career Tech</span></div>
+      <div class="proj-desc">A placement agent that doesn't give you a to-do list. It understands whether you want a job or a masters, builds a semester-wise roadmap, shows your skill gaps against real hiring data from dream companies, sends reminder emails, and adjusts the whole plan through conversation.</div>
+      <div class="proj-tags">
+        <span class="proj-tag">AI Agent</span><span class="proj-tag">NLP</span><span class="proj-tag">Career Tech</span>
+      </div>
     </div>
     <a href="https://www.vhv.rs/dpng/d/487-4873849_work-in-progress-website-hd-png-download.png" class="proj-arrow" target="_blank" rel="noopener">↗</a>
   </div>
@@ -264,8 +318,10 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
     <div>
       <div class="proj-status">Ideation + Diagrams · Hardware + CV</div>
       <div class="proj-title">ASFS — Autonomous Street Feeder System</div>
-      <div class="proj-desc">Devices on electric poles that recognise street dogs using computer vision, dispense food, and administer oral rabies vaccines. Pitched at AI India Summit and SCISOL.</div>
-      <div class="proj-tags"><span class="proj-tag">Computer Vision</span><span class="proj-tag">IoT</span><span class="proj-tag">Public Health</span><span class="proj-tag">Animal Welfare</span></div>
+      <div class="proj-desc">Devices on electric poles that recognise street dogs using computer vision, dispense food, and administer oral rabies vaccines — reducing aggression through consistent nutrition and checking rabies spread. Zone-managed by local caregivers. Pitched at AI India Summit and SCISOL, Kerala Govt.</div>
+      <div class="proj-tags">
+        <span class="proj-tag">Computer Vision</span><span class="proj-tag">IoT</span><span class="proj-tag">Public Health</span><span class="proj-tag">Animal Welfare</span>
+      </div>
     </div>
     <a href="https://www.vhv.rs/dpng/d/487-4873849_work-in-progress-website-hd-png-download.png" class="proj-arrow" target="_blank" rel="noopener">↗</a>
   </div>
@@ -276,22 +332,158 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--ink3);letter-spaci
       <div class="proj-status">Complete · Python Game</div>
       <div class="proj-title">Find the Imposter</div>
       <div class="proj-desc">A logic-based text game using file handling and randomised loops to test decision-making under pressure. Players race to identify the imposter before time runs out.</div>
-      <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Logic Design</span><span class="proj-tag">Game Dev</span></div>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">Logic Design</span><span class="proj-tag">Game Dev</span>
+      </div>
     </div>
     <a href="https://github.com/sithaara-haveline/IMPOSTER-GAME" class="proj-arrow" target="_blank" rel="noopener">↗</a>
   </div>
 
-  <!-- Research -->
   <a href="https://www.rajagiritech.ac.in/home/DBS/pdf/Conexus-%20volume%203.pdf" class="research-link" target="_blank" rel="noopener">
     <div class="research-block">
       <div class="research-title">Leveraging Infant Brain Wave Patterns for Advanced Adaptive AI Learning Models</div>
       <div class="research-meta">Conexus · RSET Micro Journal · 2025 · Page 39 · Jupyter, Python, Matplotlib</div>
-      <p class="research-desc">What if AI didn't need massive datasets — what if it learned the way a curious infant does? This research explored EEG-derived infant brain patterns as a framework for curiosity-driven, adaptive AI agents.</p>
+      <p class="research-desc">What if AI didn't need massive datasets — what if it learned the way a curious infant does? This research explored EEG-derived infant brain patterns as a framework for curiosity-driven, adaptive AI agents. Published 2025 at the intersection of neuroscience, biotechnology, and machine learning.</p>
     </div>
   </a>
 </section>
 
-<!-- The rest of your sections (About, Achievements, Skills, Experience, Contact) can stay the same as your original code. -->
+<!-- ACHIEVEMENTS, SKILLS, EXPERIENCE, CONTACT (unchanged) -->
+<div id="achievements" style="background:var(--bg2)">
+  <div class="ach-inner">
+    <div class="s-num">003 — Recognition</div>
+    <div class="ach-ghost" aria-hidden="true">07</div>
+    <div class="ach-list">
+      <div class="ach-item">
+        <div><div class="ach-cat">Hackathon · Team of 7 · ICASD-2025</div><div class="ach-title">Winner — Confluence Energy Hackathon</div><div class="ach-sub">48-hour · Built a sustainable campus energy solution with STEAG</div></div>
+        <div class="ach-right"><div class="ach-prize">₹25K</div><div class="ach-prize-lbl">Cash Prize</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">Entrepreneurship · RSET IEDC · 2025</div><div class="ach-title">2nd Place — Start It Up</div><div class="ach-sub">Won for the ASFS idea — autonomous street-dog feeding and rabies control</div></div>
+        <div class="ach-right"><div class="ach-prize">₹3K</div><div class="ach-prize-lbl">Cash Prize</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">National Idea Competition · 2025</div><div class="ach-title">Top 10 — YuviPep NextGen Visionaries</div><div class="ach-sub">Reached Phase 3 as one of 10 final ideas out of national pool</div></div>
+        <div class="ach-right"><div class="ach-prize">Top 10</div><div class="ach-prize-lbl">Nationally</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">Academic · RSET · S1 &amp; S2</div><div class="ach-title">Merit Award — Proficiency in All Subjects</div><div class="ach-sub">Awarded merit certificate + ₹2,500 for both Semester 1 and Semester 2</div></div>
+        <div class="ach-right"><div class="ach-prize">9.83</div><div class="ach-prize-lbl">CGPA</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">Research · Conexus · RSET 2025</div><div class="ach-title">Published Research Paper</div><div class="ach-sub">"Leveraging Infant Brain Wave Patterns for Advanced Adaptive AI Learning Models"</div></div>
+        <div class="ach-right"><div class="ach-prize">2025</div><div class="ach-prize-lbl">Published</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">Arts · Bharatham 2025 · RSET Arts Fest</div><div class="ach-title">'A' Grade — English Poetry Writing</div><div class="ach-sub">Top grade at RSET's annual arts festival</div></div>
+        <div class="ach-right"><div class="ach-prize">'A'</div><div class="ach-prize-lbl">Grade</div></div>
+      </div>
+      <div class="ach-item">
+        <div><div class="ach-cat">Editorial · Inter-Department · RSET</div><div class="ach-title">3rd Place — Wall Magazine Competition</div><div class="ach-sub">Editorial Head of 7-member team — led content curation and design coordination</div></div>
+        <div class="ach-right"><div class="ach-prize">3rd</div><div class="ach-prize-lbl">Place</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS, EXPERIENCE, CONTACT and Footer remain exactly as you had -->
+<hr class="divider">
+<section id="skills">
+  <div class="s-num">004 — Skills</div>
+  <h2 class="s-title">What I work<br><strong>with</strong></h2>
+  <div class="skills-grid">
+    <div class="skill-cell"><div class="skill-name">Python</div><div class="skill-type">Programming</div><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">C</div><div class="skill-type">Programming</div><div class="skill-bar"><div class="skill-bar-fill" style="width:93%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Java</div><div class="skill-type">Programming</div><div class="skill-bar"><div class="skill-bar-fill" style="width:65%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">R</div><div class="skill-type">Programming</div><div class="skill-bar"><div class="skill-bar-fill" style="width:60%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Generative AI</div><div class="skill-type">AI / Research</div><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Prompt Engineering</div><div class="skill-type">AI / Research</div><div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Deep Learning</div><div class="skill-type">AI / Research</div><div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Data Analysis</div><div class="skill-type">AI / Research</div><div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">PyTorch / TensorFlow</div><div class="skill-type">Tools</div><div class="skill-bar"><div class="skill-bar-fill" style="width:68%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Git &amp; GitHub</div><div class="skill-type">Tools</div><div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Jupyter / Colab</div><div class="skill-type">Tools</div><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+    <div class="skill-cell"><div class="skill-name">Scientific Writing</div><div class="skill-type">Communication</div><div class="skill-bar"><div class="skill-bar-fill" style="width:83%"></div></div></div>
+  </div>
+  <div style="margin-top:4rem">
+    <div class="s-num">Certifications</div>
+    <div class="certs-flow">
+      <div class="cert-chip"><div class="cert-issuer">NIT Calicut · Ragam'25</div><div class="cert-name">Cyber Forensics &amp; Ethical Hacking</div></div>
+      <div class="cert-chip"><div class="cert-issuer">UAE Govt · Manorama Horizon</div><div class="cert-name">One Million Prompters</div></div>
+      <div class="cert-chip"><div class="cert-issuer">NASSCOM FutureSkills Prime</div><div class="cert-name">Digital 101 — 30hrs</div></div>
+      <div class="cert-chip"><div class="cert-issuer">PaceLabs</div><div class="cert-name">Deep Learning Internship</div></div>
+      <div class="cert-chip"><div class="cert-issuer">NxtWave</div><div class="cert-name">AI Generative Model</div></div>
+      <div class="cert-chip"><div class="cert-issuer">Manorama Horizon</div><div class="cert-name">Vibe Coding</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<hr class="divider">
+<section id="experience">
+  <div class="s-num">005 — Experience</div>
+  <h2 class="s-title">Where I've<br><strong>shown up</strong></h2>
+  <div class="exp-grid">
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">Articon · RSET</div><div class="exp-year">2026–27</div></div>
+      <div class="exp-role">Secretary</div>
+      <div class="exp-desc">Leading the AI-DS departmental club — organising events, managing team direction, building technical culture. Conducted event "Password Panic."</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">PaceLabs, Kakkanad</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Deep Learning Intern</div>
+      <div class="exp-desc">Hands-on proficiency in neural network architectures and data preprocessing using PyTorch and TensorFlow. 20-hour programme.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">RSET IEDC · SEED</div><div class="exp-year">2025–26</div></div>
+      <div class="exp-role">Documentation Subcore Member</div>
+      <div class="exp-desc">Spearheaded content strategy for national events. Hosted and moderated technical programs. Coordinated Start It Up Phase 1 and Research Event Phase 1.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">Literary Forum · RSET</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Documentation Team Member</div>
+      <div class="exp-desc">Contributed to literary event documentation and content management for the college literary forum.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">Confluence 2.0 · RSET</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Volunteer — Food &amp; Refreshments</div>
+      <div class="exp-desc">Volunteered at Confluence 2.0, national-level technical symposium (ICASD-2025) — also where our team won the ₹25K Energy Hackathon.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">HacksUS · RSET IEDC</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Volunteer — Sponsorships &amp; Venue</div>
+      <div class="exp-desc">Member of Sponsorships &amp; Registrations team and Venue &amp; Hygiene team for HacksUS Edition V.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">IIC Regional Meet</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Volunteer — Venue Management</div>
+      <div class="exp-desc">Part of the venue management team. Also volunteered at Abhiyantriki RSET Tech Fest 2025.</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-top"><div class="exp-org">AI India Summit &amp; SCISOL</div><div class="exp-year">2025</div></div>
+      <div class="exp-role">Competitor — Youth Category</div>
+      <div class="exp-desc">Pitched ASFS at AI India Summit Youth Competition and SCISOL Hackathon by Kerala Government. Both sharpened the idea significantly.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<hr class="divider">
+<section id="contact">
+  <p class="s-num">006 — Contact</p>
+  <p class="contact-big">Let's make<br>something<br><span>worth building.</span></p>
+  <div class="contact-row">
+    <a href="mailto:u2408077@rajagiri.edu.in" class="cbtn primary">✉ Email me</a>
+    <a href="https://www.linkedin.com/in/sithaara-jubab/" class="cbtn" target="_blank">LinkedIn ↗</a>
+    <a href="https://github.com/sithaara-haveline" class="cbtn" target="_blank">GitHub ↗</a>
+    <a href="tel:+919048031001" class="cbtn">+91 90480-31001</a>
+  </div>
+</section>
+
+<footer>
+  <p>2026 · Sithaara Jubab Roshan · RSET Kakkanad</p>
+  <p>B.Tech AI &amp; Data Science (Hons.) · Minor in Biotechnology</p>
+</footer>
 
 <script>
 const cursor = document.getElementById('cursor');
