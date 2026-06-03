@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work in Progress — Sithaara Jubab Roshan</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg: #f8f4ed;
+  --bg2: #f0e9df;
+  --ink: #2c2a24;
+  --ink2: #5c584f;
+  --ink3: #8a8078;
+  --gold: #c8a96e;
+  --serif:'Instrument Serif',serif;
+  --sans:'Syne',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+}
+.container{max-width:640px;}
+
+.status{
+  display:inline-block;
+  background:rgba(200,169,110,0.1);
+  color:var(--gold);
+  font-family:var(--mono);
+  font-size:0.78rem;
+  letter-spacing:1.5px;
+  padding:8px 22px;
+  border-radius:50px;
+  margin-bottom:2.5rem;
+}
+
+h1{
+  font-family:var(--serif);
+  font-size:clamp(2.8rem, 8vw, 4.8rem);
+  font-style:italic;
+  line-height:1.05;
+  margin-bottom:1rem;
+}
+
+.subtitle{
+  font-size:1.25rem;
+  color:var(--ink2);
+  margin-bottom:2.5rem;
+}
+
+.desc{
+  font-size:1.05rem;
+  color:var(--ink3);
+  line-height:1.8;
+  max-width:520px;
+  margin:0 auto 3rem;
+}
+
+.progress{
+  height:3px;
+  background:var(--border2);
+  border-radius:2px;
+  overflow:hidden;
+  margin:2.5rem 0;
+}
+.progress-fill{
+  height:100%;
+  width:65%;
+  background:linear-gradient(90deg, var(--gold), #e8c98e);
+  animation: prog 4s ease-in-out infinite;
+}
+@keyframes prog{
+  0%,100%{width:58%;}
+  50%{width:73%;}
+}
+
+.back{
+  color:var(--ink3);
+  text-decoration:none;
+  font-family:var(--mono);
+  font-size:0.85rem;
+  letter-spacing:1px;
+  padding:14px 32px;
+  border:1px solid var(--border);
+  border-radius:50px;
+  display:inline-block;
+  margin-top:2rem;
+  transition:all 0.3s;
+}
+.back:hover{
+  background:var(--gold);
+  color:white;
+  border-color:var(--gold);
+}
+
+.footer{
+  margin-top:5rem;
+  font-family:var(--mono);
+  font-size:0.75rem;
+  color:var(--ink3);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="status">WORK IN PROGRESS</div>
+  
+  <h1 id="title">Project Title</h1>
+  <p class="subtitle" id="subtitle">Project Subtitle</p>
+  
+  <p class="desc" id="desc">
+    This project is currently under active development. 
+    More details and live demo will be available soon.
+  </p>
+
+  <div class="progress">
+    <div class="progress-fill"></div>
+  </div>
+
+  <a href="https://sithaara-haveline.github.io/Sithaara-portfolio/" class="back">← Back to Portfolio</a>
+
+  <div class="footer">
+    Sithaara Jubab Roshan • 2026
+  </div>
+</div>
+
+</body>
+</html>
